@@ -1,0 +1,6 @@
+2024년 5월 20일에 작성된 Domain Model, Sequence Diagram (SSD), 그리고 Operation Contract를 정리한 폴더입니다. 
+각 파일에는 해당 개념의 정의와 구체적인 내용이 포함되어 있습니다.
+
+1. Domain Model: 시스템의 주요 개체와 이들 간의 관계를 정의한 모델입니다.
+2. Sequence Diagram (SSD):시스템의 특정 기능에 대한 시나리오를 시각적으로 표현한 다이어그램입니다.
+3. Operation Contract: 특정 시스템 동작에 대한 계약을 정의한 문서로, 동작의 입력, 출력, 상태 변화 등을 명시합니다.
