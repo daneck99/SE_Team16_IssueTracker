@@ -7,17 +7,17 @@ spring:
     name:Software_Eng
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/db_software_eng?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
-#    //각자 db id랑 pw 입력
-    username: daneck
+    url: jdbc:mysql://localhost:3306/db_codingrecipe?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    #    //각자 db id랑 pw 입력
+    username: user_codingrecipe
     password: 1234
   thymeleaf:
-      cache: false
-
+    cache: false
   jpa:
     open-in-view: false
     show-sql: true
     hibernate:
+<<<<<<< HEAD
 #      // entity 관련 옵션(class 생성, 변경 관련)
 =======
 server:
@@ -43,3 +43,6 @@ spring:
 #      // entity 관련 옵션(class 생성, 변경 관련)
 >>>>>>> b01b163 (Initial commit)
       ddl-auto: update
+=======
+      ddl-auto: update
+>>>>>>> 94699e06d5c3e8d90d0e533efaa194ad7ed32ef5

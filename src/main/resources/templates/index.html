@@ -7,7 +7,12 @@
 </head>
 <body>
   <h2>hello springboot 2024</h2>
+<!--  <a href="/issue/write">write</a>-->
+  <button onclick="saveReq()">Raise Issue</button>
+  <button onclick="listReq()">List</button>
+  <button onclick="pagingReq()">페이징목록</button>
 </body>
+<<<<<<< HEAD
 =======
 <!DOCTYPE html>
 <html lang="en">
@@ -23,4 +28,21 @@
 <a href="/member/">회원목록</a>
 </body>
 >>>>>>> b01b163 (Initial commit)
+=======
+<script>
+  const saveReq = () =>{
+    location.href = "/issue/write"
+  }
+
+  const listReq = () =>{
+    location.href = "/issue/";
+  }
+
+  const pagingReq = () =>{
+    location.href = "/issue/paging"
+  }
+
+</script>
+
+>>>>>>> 94699e06d5c3e8d90d0e533efaa194ad7ed32ef5
 </html>
