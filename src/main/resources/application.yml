@@ -1,13 +1,14 @@
 server:
-  port: 8080
+  port: 8084
 
 spring:
   application:
     name:Software_Eng
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/db_software_eng?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
-#    //각자 db id랑 pw 입력
+#    각자 pc에 만들어놓은 database
+    url: jdbc:mysql://localhost:13306/db_software_eng?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+#    mysql에 생성한 사용자 계정 정보
     username: daneck
     password: 1234
   thymeleaf:
