@@ -5,7 +5,9 @@ Today's update
   2. 프론트엔드
     1) 프로젝트 선택화면, 메인 페이지 완성(new)
     2) 로그인 페이지 완성(new)
-  3. document
+  3. git
+    1) new_feature에 백엔드 브랜치들 병합해놓음 (수정 필요)
+  4. document
     1) class diagram 대폭 수정중
     2) ER 추가 여부 고려
     3) 스프링에 더 적합한 구조로 다방면에서 수정 필요(important!)
