@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>title(||쓰지 않은 경우)</th>
+        <th>writer</th>
+        <th>date</th>
+        <th>hits</th>
+    </tr>
+    <tr th:each="issue: ${issueList}">
+        <td th:text="${issue.id}"></td>
+        <td><a th:href="@{|/issue/${issue.id}|}" th:text="${issue.issueTitle}"></a></td>
+        <td><a th:href="@{/issue/${issue.id}}" th:text="${issue.issueTitle}"></a></td>
+        <td th:text="${issue.issueWriter}"></td>
+        <td th:text="*{#temporals.format(issue.issueCreatedTime, 'yyyy-MM-dd HH:mm:ss')}"></td>
+<!--        <td th:text="${issue.issueHits}"></td>-->
+    </tr>
+</table>
+</body>
+</html>

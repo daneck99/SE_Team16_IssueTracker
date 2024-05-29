@@ -6,5 +6,24 @@
 </head>
 <body>
   <h2>hello springboot 2024</h2>
+<!--  <a href="/issue/write">write</a>-->
+  <button onclick="saveReq()">Raise Issue</button>
+  <button onclick="listReq()">List</button>
+  <button onclick="pagingReq()">페이징목록</button>
 </body>
+<script>
+  const saveReq = () =>{
+    location.href = "/issue/write"
+  }
+
+  const listReq = () =>{
+    location.href = "/issue/";
+  }
+
+  const pagingReq = () =>{
+    location.href = "/issue/paging"
+  }
+
+</script>
+
 </html>
