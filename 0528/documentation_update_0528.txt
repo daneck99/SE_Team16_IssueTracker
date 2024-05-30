@@ -1,3 +1,0 @@
-Todays update for 05.28.Tue
-  1. select framework: 스프링부트를 바탕으로 프론트는 리액트, DB는 mysql,jpa-하이버네이트,jdk 21
-  2. 역할 분배: 백에서 유저관리는 신형철, 이슈관리는 김재원, DB는 양희목, 프론트는 안지영,신나리
