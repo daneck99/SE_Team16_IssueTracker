@@ -1,10 +1,17 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+//유저 데이터 예시
+const userData = [
+  { ID: "user1", password: "password1" },
+  { ID: "user2", password: "password2" },
+];
+
 const Login = () => {
   const [id, setID] = useState("");
   const [password, setPassword] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -18,10 +25,20 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    //여기에 로그인 로직 추가
-    console.log("ID:", id);
-    console.log("Password:", password);
-    navigate("/dashboard"); //로그인 후 이동할 페이지(프로젝트페이지)
+
+    //유저 데이터에서 입력한 아이디와 비밀번호가 일치하는지 확인
+    const user = userData.find(
+      (user) => user.ID === id && user.password === password
+    );
+
+    if (user) {
+      //로그인 성공
+      console.log("Login successful");
+      navigate("/dashboard"); //로그인 후 이동할 페이지
+    } else {
+      //로그인 실패
+      setErrorMessage("가입된 정보가 없습니다.");
+    }
   };
 
   return (
@@ -37,6 +54,7 @@ const Login = () => {
             required
           />
         </div>
+
         <div>
           <label>Password:</label>
           <input
@@ -46,8 +64,12 @@ const Login = () => {
             required
           />
         </div>
-        <button type="submit">Login</button>
+
+        <button type="submit" disabled={isButtonDisabled}>
+          Login
+        </button>
       </form>
+      {errorMessage && <div className="error-message">{errorMessage}</div>}
     </div>
   );
 };
