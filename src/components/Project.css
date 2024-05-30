@@ -1,0 +1,39 @@
+.Project {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(240, 240, 240);
+}
+
+.Project input {
+  width: 20px;
+}
+
+.Project .p_name {
+  cursor: pointer;
+  flex: 1;
+}
+.Project .i_name {
+  cursor: pointer;
+  flex: 1;
+}
+
+.Project .date {
+  font-size: 14px;
+  color: gray;
+}
+
+.Project button {
+  cursor: pointer;
+  background-color: rgb(150, 209, 244);
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  padding: auto;
+}
+
+.Project .Admin {
+  flex: 1;
+}
