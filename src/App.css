@@ -1,0 +1,70 @@
+.App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.notification {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 9px;
+  margin-bottom: 25px;
+}
+
+.notification p {
+  margin: 5px 0;
+}
+
+.search,
+.result {
+  margin-bottom: 20px;
+}
+
+.search form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.search label {
+  margin-right: 10px;
+}
+
+.search input,
+.search select {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.search button {
+  padding: 6px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search button:hover {
+  background-color: #0056b3;
+}
+
+.result table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.result th,
+.result td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.result th {
+  background-color: #f2f2f2;
+}
