@@ -13,6 +13,8 @@ import ProjectDetail from "./components/ProjectDetail";
 import Prolist from "./components/Prolist";
 import IssueDetail from "./components/IssueDetail";
 import Isslist from "./components/Isslist";
+import Login from "./components/Login";
+import Statistic from "./components/Statistic";
 //임시데이터
 const mokdata = [
   {
@@ -81,11 +83,27 @@ function App() {
       <div className="App">
         <Routes>
           <Route
+            path="/"
+            element={
+              <>
+                <Login />
+              </>
+            }
+          />
+          <Route
             path="/main"
             element={
               <>
                 <Header />
                 <List projects={projects} onDelete={onDelete} />
+              </>
+            }
+          />
+          <Route
+            path="/Statistic"
+            element={
+              <>
+                <Statistic />
               </>
             }
           />
