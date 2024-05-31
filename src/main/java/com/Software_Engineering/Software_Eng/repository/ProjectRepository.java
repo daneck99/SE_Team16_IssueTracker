@@ -1,4 +1,10 @@
 package com.Software_Engineering.Software_Eng.repository;
 
-public interface ProjectRepository {
+import com.Software_Engineering.Software_Eng.entity.ProjectEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ProjectRepository extends JpaRepository<ProjectEntity,Long> {
+
 }

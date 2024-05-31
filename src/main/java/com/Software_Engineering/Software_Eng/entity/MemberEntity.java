@@ -22,11 +22,17 @@ public class MemberEntity {
 
     @Column
     private String memberName;
+
+    @Enumerated(EnumType.STRING)
+    @Column
+    private Authorization memberAuth;
+
     public static MemberEntity toMemberEntity(MemberDTO memberDTO){
         MemberEntity memberEntity = new MemberEntity();
         memberEntity.setMemberEmail(memberDTO.getMemberEmail());
         memberEntity.setMemberPassword(memberDTO.getMemberPassword());
         memberEntity.setMemberName(memberDTO.getMemberName());
+        memberEntity.setMemberAuth(memberDTO.getMemberAuth());
         return memberEntity;
     }
     public static MemberEntity toUpdateMemberEntity(MemberDTO memberDTO){
@@ -35,6 +41,7 @@ public class MemberEntity {
         memberEntity.setMemberEmail(memberDTO.getMemberEmail());
         memberEntity.setMemberPassword(memberDTO.getMemberPassword());
         memberEntity.setMemberName(memberDTO.getMemberName());
+        memberEntity.setMemberAuth(memberDTO.getMemberAuth());
         return memberEntity;
     }
 }

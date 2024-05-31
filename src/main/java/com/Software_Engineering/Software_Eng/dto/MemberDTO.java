@@ -1,5 +1,6 @@
 package com.Software_Engineering.Software_Eng.dto;
 
+import com.Software_Engineering.Software_Eng.entity.Authorization;
 import com.Software_Engineering.Software_Eng.entity.MemberEntity;
 import lombok.*;
 
@@ -14,12 +15,14 @@ public class MemberDTO {
     private String memberEmail;
     private String memberPassword;
     private String memberName;
+    private Authorization memberAuth;
     public static MemberDTO toMemberDTO(MemberEntity memberEntity){
         MemberDTO memberDTO = new MemberDTO();
         memberDTO.setId(memberEntity.getId());
         memberDTO.setMemberEmail(memberEntity.getMemberEmail());
         memberDTO.setMemberPassword(memberEntity.getMemberPassword());
         memberDTO.setMemberName(memberEntity.getMemberName());
+        memberDTO.setMemberAuth(memberEntity.getMemberAuth());
         return memberDTO;
     }
 

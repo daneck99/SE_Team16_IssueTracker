@@ -10,10 +10,10 @@ import java.time.LocalDateTime;
 @Setter
 @Getter
 @Table(name = "issue_table")
-public class IssueEntity {
+public class IssueEntity extends TimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long i_id;
+    private Long id;
 
     @OneToOne
     @JoinColumn(name = "reporter_id")
