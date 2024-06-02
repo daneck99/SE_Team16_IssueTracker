@@ -66,10 +66,31 @@ const iokdata = [
     date: new Date().getTime(),
   },
 ];
-
+// 댓글 예시 데이터
+const comment_data = [
+  {
+    comment_id: 0,
+    contents: "해결이 시급한 중도한 문제네요.",
+    commented_time: "2024-01-05",
+    writer_id: "nananri",
+  },
+  {
+    comment_id: 1,
+    contents: "ㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
+    commented_time: "2024-01-06",
+    writer_id: "se",
+  },
+  {
+    comment_id: 2,
+    contents: "집 가고 싶다",
+    commented_time: "2024-01-07",
+    writer_id: "papapap",
+  },
+];
 function App() {
   const [projects, setProjects] = useState(mokdata);
   const [issues, setIssues] = useState(iokdata);
+  const [comments, setComments] = useState(comment_data);
 
   const onDelete = (targetId) => {
     //배열에서 targetId와 일치하는 id를 갖는 요소만 삭제한 새로운 배열
@@ -121,7 +142,7 @@ function App() {
             element={
               <>
                 <IssueDetail issues={issues} />
-                <Isslist />
+                <Isslist comments={comments} />
               </>
             }
           />

@@ -1,10 +1,20 @@
-import "./Comment.css";
+import "./Project.css";
 import Issue from "./Issue";
 import { useState } from "react";
 import { Routes, Route, useNavigate, Link } from "react-router-dom";
 
-const Comment = () => {
-  return <div className="Comment">댓글내용</div>;
+// 디비에서 받아와서 해야될듯
+
+const Comment = (comment_id, contents, commented_time, writer_id) => {
+  return (
+    <>
+      <div className="Project">
+        <div>contents</div>
+        <div className="date">commented_time</div>
+        <div>작성자</div>
+      </div>
+    </>
+  );
 };
 
 export default Comment;

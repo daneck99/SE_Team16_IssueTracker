@@ -34,7 +34,6 @@ const IssueDetail = ({ issues }) => {
     <div className="ProjectDetail">
       <div>
         <button>이슈 삭제</button>
-        <button>이슈 수정</button>
       </div>
 
       <h5>이슈 id: </h5>

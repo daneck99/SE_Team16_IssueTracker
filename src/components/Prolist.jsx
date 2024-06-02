@@ -3,7 +3,6 @@ import Issue from "./Issue";
 import { useRef, useState } from "react";
 import { Routes, Route, useNavigate, Link } from "react-router-dom";
 
-const issue = {};
 const Prolist = ({ issues, onDelete }) => {
   const [search, setSearch] = useState("");
 
@@ -24,7 +23,7 @@ const Prolist = ({ issues, onDelete }) => {
 
   const filteredissues = getFilteredData();
 
-  //이슈 등록
+  //이슈 등록 함수 백에서 호출
 
   return (
     <div className="List">
