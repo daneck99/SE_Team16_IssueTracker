@@ -15,6 +15,7 @@ import IssueDetail from "./components/IssueDetail";
 import Isslist from "./components/Isslist";
 import Login from "./components/Login";
 import Statistic from "./components/Statistic";
+import SignUp from "./components/SignUp";
 //임시데이터
 const mokdata = [
   {
@@ -134,6 +135,14 @@ function App() {
               <>
                 <ProjectDetail projects={projects} />
                 <Prolist />
+              </>
+            }
+          />
+          <Route
+            path="ProjectDetail/SignUp/:p_id"
+            element={
+              <>
+                <SignUp />
               </>
             }
           />
