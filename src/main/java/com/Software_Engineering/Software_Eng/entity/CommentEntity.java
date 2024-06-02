@@ -1,15 +1,16 @@
 package com.Software_Engineering.Software_Eng.entity;
 
 import com.Software_Engineering.Software_Eng.dto.CommentDTO;
-import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+
+import jakarta.persistence.*;
 
 @Entity
 @Getter
 @Setter
 @Table(name = "comment_table")
-public class CommentEntity {
+public class CommentEntity extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -20,15 +21,17 @@ public class CommentEntity {
     @Column
     private String commentContents;
 
+    /* Board:Comment = 1:N */
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "issue_id")
-    private IssueEntity issueEntity;
+    @JoinColumn(name = "board_id")
+    private BoardEntity boardEntity;
 
-    public static CommentEntity toSaveEntity(CommentDTO commentDTO, IssueEntity issueEntity) {
+
+    public static CommentEntity toSaveEntity(CommentDTO commentDTO, BoardEntity boardEntity) {
         CommentEntity commentEntity = new CommentEntity();
         commentEntity.setCommentWriter(commentDTO.getCommentWriter());
         commentEntity.setCommentContents(commentDTO.getCommentContents());
-        commentEntity.setIssueEntity(issueEntity);
+        commentEntity.setBoardEntity(boardEntity);
         return commentEntity;
     }
 }

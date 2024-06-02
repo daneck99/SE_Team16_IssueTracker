@@ -5,24 +5,24 @@
     <title>update</title>
 </head>
 <body>
-<form action="/issue/update" method="post" name="updateForm">
-    <input type="hidden" name="id" th:value="${issueUpdate.id}">
-    writer: <input type="text" name="issueWriter" th:value="${issueUpdate.issueWriter}" readonly> <br>
-    pass: <input type="hidden" name="issuePass" id="issuePass"> <br>
-    title: <input type="text" name="issueTitle" th:value="${issueUpdate.issueTitle}"> <br>
-    description: <textarea name="issueDescription" cols="30" rows="10" th:text="${issueUpdate.issueDescription}"></textarea> <br>
-<!--    <input type="hidden" name="issueHits" th:value="${issueUpdate.issueHits}">-->
-    <input type="button" value="글수정" onclick="issueUpdate()">
+<form action="/board/update" method="post" name="updateForm">
+    <input type="hidden" name="id" th:value="${boardUpdate.id}">
+    writer: <input type="text" name="boardWriter" th:value="${boardUpdate.boardWriter}" readonly> <br>
+    pass: <input type="text" name="boardPass" id="boardPass"> <br>
+    title: <input type="text" name="boardTitle" th:value="${boardUpdate.boardTitle}"> <br>
+    contents: <textarea name="boardContents" cols="30" rows="10" th:text="${boardUpdate.boardContents}"></textarea> <br>
+    <input type="hidden" name="boardHits" th:value="${boardUpdate.boardHits}">
+    <input type="button" value="글수정" onclick="boardUpdate()">
 </form>
 <script th:inline="javascript">
-    const issueUpdate = () => {
-        // const pass = [[${issueUpdate.issuePass}]];
-        // const inputPass = document.getElementById("issuePass").value;
-        // if (pass == inputPass) {
+    const boardUpdate = () => {
+        const pass = [[${boardUpdate.boardPass}]];
+        const inputPass = document.getElementById("boardPass").value;
+        if (pass == inputPass) {
             document.updateForm.submit();
-        // } else {
-        //     alert("비밀번호가 일치하지 않습니다!");
-        // }
+        } else {
+            alert("비밀번호가 일치하지 않습니다!");
+        }
     }
 </script>
 </body>

@@ -1,5 +1,6 @@
 package com.Software_Engineering.Software_Eng.dto;
 
+import com.Software_Engineering.Software_Eng.entity.CommentEntity;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -13,6 +14,16 @@ public class CommentDTO {
     private Long id;
     private String commentWriter;
     private String commentContents;
-    private Long issueId;
+    private Long boardId;
     private LocalDateTime commentCreatedTime;
+
+    public static CommentDTO toCommentDTO(CommentEntity commentEntity, Long boardId) {
+        CommentDTO commentDTO = new CommentDTO();
+        commentDTO.setId(commentEntity.getId());
+        commentDTO.setCommentWriter(commentEntity.getCommentWriter());
+        commentDTO.setCommentContents(commentEntity.getCommentContents());
+        commentDTO.setCommentCreatedTime(commentEntity.getCreatedTime());
+        commentDTO.setBoardId(boardId);
+        return commentDTO;
+    }
 }

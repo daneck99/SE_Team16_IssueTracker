@@ -14,13 +14,13 @@
         <th>date</th>
         <th>hits</th>
     </tr>
-    <tr th:each="issue: ${issueList}">
-        <td th:text="${issue.id}"></td>
-        <td><a th:href="@{|/issue/${issue.id}|}" th:text="${issue.issueTitle}"></a></td>
-        <td><a th:href="@{/issue/${issue.id}}" th:text="${issue.issueTitle}"></a></td>
-        <td th:text="${issue.issueWriter}"></td>
-        <td th:text="*{#temporals.format(issue.issueCreatedTime, 'yyyy-MM-dd HH:mm:ss')}"></td>
-<!--        <td th:text="${issue.issueHits}"></td>-->
+    <tr th:each="board: ${boardList}">
+        <td th:text="${board.id}"></td>
+        <td><a th:href="@{|/board/${board.id}|}" th:text="${board.boardTitle}"></a></td>
+        <td><a th:href="@{/board/${board.id}}" th:text="${board.boardTitle}"></a></td>
+        <td th:text="${board.boardWriter}"></td>
+        <td th:text="*{#temporals.format(board.boardCreatedTime, 'yyyy-MM-dd HH:mm:ss')}"></td>
+        <td th:text="${board.boardHits}"></td>
     </tr>
 </table>
 </body>
