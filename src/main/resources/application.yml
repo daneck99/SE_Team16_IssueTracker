@@ -20,3 +20,4 @@ spring:
     hibernate:
 #      // entity 관련 옵션(class 생성, 변경 관련)
       ddl-auto: update
+

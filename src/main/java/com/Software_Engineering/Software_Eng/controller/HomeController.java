@@ -1,15 +1,15 @@
 package com.Software_Engineering.Software_Eng.controller;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class HomeController {
-//    기본 주소 요청
-    // 사용자에게 요청이 들어오면 가장 먼저 컨트롤러로 전달됨
+
     @GetMapping("/")
-    public String index(){
-        System.out.println("HomeController.index");
-        return "index"; // =>template 폴더의 index.html을 찾아감
+    public ResponseEntity<String> index() {
+        return ResponseEntity.ok("Welcome to the homepage!"); // 또는 다른 메시지
     }
 }
+
