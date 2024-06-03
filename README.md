@@ -1,10 +1,8 @@
 # 이슈 관리 시스템
 
-![Issue Management System](https://via.placeholder.com/800x200.png?text=Issue+Management+System)
 
 ### 간단한 설명
 소프트웨어 개발 과정에서 조직/단체의 필요에 따라 이슈를 체계적으로 관리하는 시스템입니다. JIRA, TRAC, Bugzilla, Backlog 등의 기존 서비스를 분석하여 핵심 기능을 구현하였습니다.  
-Spring Boot, React-Vite, MySQL 8.0, Hibernate를 사용하였습니다.
 
 ### 배지(Badges)
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
