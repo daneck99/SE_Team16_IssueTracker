@@ -37,17 +37,15 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
-tasks.named('test') {
-	useJUnitPlatform()
-}
 
+//def frontendDir = "C:/Users신형철/Desktop/소공/Software_Eng_Frontend"
+def frontendDir = "C:\\Users\\신형철\\Desktop\\소공\\Software_Eng\\src\\main\\Software_Eng_Frontend"
 
-def frontendDir = "C:\\Users\\신형철\\Desktop\\소공\\Software_Eng_Frontend"
 
 sourceSets {
 	main {
 		resources {
-			srcDirs = ["C:\\Users\\신형철\\Desktop\\소공\\Software_Eng\\src/main/resources"]
+			srcDirs = ["C:/Users/신형철/Desktop/소공/Software_Eng/src/main/resources"]
 		}
 	}
 }
@@ -81,7 +79,10 @@ tasks.register('buildReact', Exec) {
 
 tasks.register('copyReactBuildFiles', Copy) {
 	dependsOn "buildReact"
-	from "$frontendDir/build"
-	into "C:\\Users\\신형철\\Desktop\\소공\\Software_Eng\\src/main/resources/static"
+	from "$frontendDir/dist"
+	into "C:/Users/신형철/Desktop/소공/Software_Eng/src/main/resources/static"
 }
 
+tasks.named('test') {
+	useJUnitPlatform()
+}

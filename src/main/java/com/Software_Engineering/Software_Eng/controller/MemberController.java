@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequiredArgsConstructor
 public class MemberController {
@@ -28,7 +29,7 @@ public class MemberController {
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    @PostMapping("/members/login")
+    @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody MemberDTO memberDTO) {
         MemberDTO loginResult = memberService.login(memberDTO);
         if (loginResult != null) {
