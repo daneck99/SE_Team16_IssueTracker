@@ -35,7 +35,7 @@ npm install
 프로젝트를 사용하는 방법은 다음과 같습니다:
 
 ```java
-import com.yourproject.IssueManagementSystem;
+import com.SE.IssueManagementSystem;
 
 public class Main {
     public static void main(String[] args) {
@@ -56,10 +56,10 @@ public class Main {
 
 ### 작성자 정보
 
-- **작성자**: Your Name
-- **GitHub**: [yourusername](https://github.com/yourusername)
+- **작성자**: 양희목
+- **GitHub**: [Hemok01](https://github.com/Hemok01)
 
 ### 연락처
 
-질문이나 피드백이 있으시면 your.email@example.com으로 연락주세요.
+질문이나 피드백이 있으시면 daneck99@gmail.com으로 연락주세요.
 
