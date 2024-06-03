@@ -26,7 +26,7 @@ const SignUp = () => {
     e.preventDefault();
 
     //이메일 중복검사
-    const emailExists = existUsers.some((user) => user.email === email);
+    const emailExists = existUsers.some(user => user.email === email);
     if (emailExists) {
       setErrorMessage("이미 가입된 이메일입니다");
       return;
@@ -58,7 +58,7 @@ const SignUp = () => {
               <input
                 type="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.valu)}
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
